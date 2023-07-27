@@ -1,0 +1,22 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    {% if myform.error %}
+    
+    <p style="color:red;"> Datos incorrectos, revisar </p>
+
+    {% endif %}
+
+    <h6> Buscar productos para alquilar </h6><br>
+
+    <form action="/AlquilerApp/busqueda/" method="GET"> 
+
+        <input type="text" name="item" id="item"><br>
+        <input type="submit" value="Buscar">
+        
+    </form>
+    
+{% endblock %}

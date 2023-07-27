@@ -1,0 +1,28 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    {% if myform.error %}
+    
+    <p style="color:red;"> Datos incorrectos, revisar </p>
+
+    {% endif %}
+
+    <H3> Alta de items en alquiler</H3>
+    <H6> (precios en $ por hora)</H6>
+    <br>
+
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+
+            {{ myform }}        
+
+        </table>
+        
+        <input type="submit" value="Enviar">
+    </form>
+    
+{% endblock %}
+    

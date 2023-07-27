@@ -4,6 +4,12 @@
 
 {% block ContenidoQueCambia %}
 
+    {% if myform.error %}
+    
+    <p style="color:red;"> Datos incorrectos, revisar </p>
+
+    {% endif %}
+
     <p> Buscando... {{ item }} </p>
 
     {% if cod %}

@@ -57,7 +57,7 @@ def buscarProductos(request):
 
 def busqueda(request):
      
-     if request.GET['item']:
+     if 'item' in request.GET:
          
          item=request.GET['item']
          cod=Alquiler.objects.filter(item_icontains=item)

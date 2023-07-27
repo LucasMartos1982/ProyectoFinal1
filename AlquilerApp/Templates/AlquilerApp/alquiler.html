@@ -4,16 +4,17 @@
 
 {% block ContenidoQueCambia %}
 
-    <p> Buscando... {{ item }} </p>
-
     {% if cod %}
-        <ul> 
-            {% for it in cod %}
-                <li> {{ cod.item }} </li>
-                <li> {{ cod.precio }} </li>
-            {% endfor %}
-        </ul>
-
-    {% endif%}
+    
+        <p> Buscando... {{ item }} </p>
+            <ul> 
+                {% for it in cod %}
+                    <li> {{ it.item }} </li>
+                    <li> {{ it.precio }} </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <P> No se encontraron resultados </P>
+    {% endif %}
     
 {% endblock %}

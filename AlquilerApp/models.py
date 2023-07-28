@@ -7,8 +7,13 @@ class Alquiler(models.Model):
     cod=models.CharField(max_length=60)
     precio=models.FloatField(max_length=20)
     
+    def __str__(self):
+        return f'Item: {self.item} - Cod: {self.cod} - Precio $/hs: {self.precio}'
+    
 class Cliente(models.Model):
     nombre=models.CharField(max_length=20)
     apellido=models.CharField(max_length=20)
     email=models.EmailField()
     
+    def __str__(self):
+        return f'Nombre: {self.nombre} - Apellido: {self.apellido} - Email: {self.email}'

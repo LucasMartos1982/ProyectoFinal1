@@ -1,0 +1,18 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    {% for a in articulos %}
+
+        <li> {{a}}</li>
+        <button>
+            <a href="{% url 'EliminaArticulo' a.item %}">Eliminar</a>
+            <a href="(% url 'EditarArticulo' a.item %)">Editar</a>
+        </button>
+    {% endfor %}
+    <br>
+    <a href="alquiler.html"> Agregar un nuevo Articulo </a>
+
+{% endblock %}

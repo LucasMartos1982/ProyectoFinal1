@@ -1,0 +1,18 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    {% for c in clientes %}
+
+        <li> {{c}}</li>
+        <button>
+            <a href="{% url 'EliminaCliente' c.nombre %}">Eliminar</a>
+        </button>
+    
+    {% endfor %}
+    <br>
+    <a href= "clienteFormulario.html"> Agregar un nuevo Cliente </a>
+
+{% endblock %}

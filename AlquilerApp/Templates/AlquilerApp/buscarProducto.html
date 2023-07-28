@@ -12,7 +12,7 @@
 
     <h6> Buscar productos para alquilar </h6><br>
 
-    <form action="/AlquilerApp/busqueda/" method="GET"> 
+    <form action="{% url 'buscar_alquiler' %}" method="GET"> {% csrf_token %} 
 
         <input type="text" name="item" id="item"><br>
         <input type="submit" value="Buscar">

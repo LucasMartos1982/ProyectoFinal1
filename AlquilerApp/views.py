@@ -62,12 +62,9 @@ def busqueda(request):
         cod=Alquiler.objects.filter(item_icontains=item)
         precio=Alquiler.objects.filter(item_icontains=item)
          
-        return render(request,'alquiler.html',{'item':item,'cod':cod,'precio':precio})
+        return render(request,'AlquilerApp/alquiler.html',{'item':item,'cod':cod,'precio':precio})
     
-    else:
-        
-        rta= 'No hay datos'         
-    return HttpResponse(rta)
+    return render(request,'AlquilerApp/buscarProducto.html')
 
 # CRUD read 
 

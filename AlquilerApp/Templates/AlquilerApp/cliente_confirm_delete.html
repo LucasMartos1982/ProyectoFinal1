@@ -1,0 +1,15 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    <p> Borrar Cliente </p>
+    
+    <form method="POST"> {% csrf_token %}
+        <p> Esta seguro que desea eliminar el cliente "{{ object }}" ?</p>
+        <input class="btn btn-danger" type="submit" value="Eliminar">
+        <a class="btn btn-primary" href="{% url 'Clientes' %}">Volver</a>
+    </form>
+    
+{% endblock %}

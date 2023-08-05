@@ -1,0 +1,14 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    <p> Cliente: <i> {{ cliente.nombre }} </i></p>
+    <p> Apellido:<i> {{ cliente.apellido }} </i></p>
+    <p> email:<i> {{ cliente.email }} </i></p>
+    <p>
+        <a href="{% url 'List' %}"> Volver </a>
+    </p>
+
+{% endblock %}

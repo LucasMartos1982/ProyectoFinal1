@@ -1,0 +1,14 @@
+{% extends "EstenopoApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+
+    <form action="" method="POST"> 
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+{% endblock %}

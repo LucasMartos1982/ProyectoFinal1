@@ -1,0 +1,14 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    <p> Articulo: <i> {{ alquiler.item }} </i></p>
+    <p> Codigo:<i> {{ alquiler.cod }} </i></p>
+    <p> Precio:<i> {{ alquiler.precio }} </i></p>
+    <p>
+        <a href="{% url 'Art_List' %}"> Volver </a>
+    </p>
+
+{% endblock %}

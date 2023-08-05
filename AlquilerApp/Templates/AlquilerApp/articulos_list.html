@@ -1,0 +1,27 @@
+{% extends "AlquilerApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    <p> Nuestros Articulos</p>
+
+    <ul>
+        {% for alquiler in object_list %}
+
+            <li>
+                <p> NOMBRE: {{alquiler.item}}</p>
+                <p>
+                    <a href="{% url 'Art_Detail' alquiler.id %}"> Ver </a>
+                    {% if request.user.is_staff %}
+                        <a href="{% url 'Art_Edit' alquiler.id %}"> Editar </a>
+                        <a href="{% url 'Art_Delete' alquiler.id %}"> Borrar </a>
+                    {% endif %}
+                </p>
+            </li> 
+        {% endfor %}    
+
+    </ul>
+
+    
+{% endblock %}

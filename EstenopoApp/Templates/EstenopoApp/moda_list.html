@@ -11,6 +11,7 @@
 
             <li>
                 <p> NOMBRE: {{moda.nombre_moda}}</p>
+                <img src="../../media/{{moda.foto}}" alt="{{moda.nombre_moda}}" class="img-fluid" width="400" height="500">                
                 <p>
                     <a href="{% url 'MDetail' moda.id %}" class="btn btn-success">Ver</a>
                     {% if request.user.is_staff %}

@@ -12,6 +12,7 @@ class Producto(models.Model):
 class Moda(models.Model):
     nombre_moda=models.CharField(max_length=100)
     precio_moda=models.FloatField()
+    foto=models.ImageField(upload_to='Moda', null=True, blank = True)
     
     def __str__(self):
         return f'Fotografia de Moda: {self.nombre_moda} - Precio: {self.precio_moda}'

@@ -12,5 +12,10 @@ urlpatterns = [
     path('login/',views.login_request,name='Login'),
     path('editarPerfil/',views.editarPerfil, name='EditarPerfil'),
     path('registro/',views.registro,name="Registro"),
-        
+    path('moda/list',views.ModaList.as_view(),name='MList'),
+    path('moda/<pk>',views.ModaDetalle.as_view(),name='MDetail'),
+    path('moda/nuevo/',views.ModaCreacion.as_view(),name='MNew'),
+    path('moda/editar/<pk>',views.ModaUpdate.as_view(),name='MEdit'),
+    path('moda/delete/<pk>',views.ModaDelete.as_view(),name='MDelete'),
+    path('about/',views.about,name='About')    
 ]

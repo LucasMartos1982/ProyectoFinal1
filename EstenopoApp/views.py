@@ -11,7 +11,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
 
 def home(request):
     return render(request,'EstenopoApp/home.html')
@@ -92,3 +91,30 @@ def registro(request):
     else:
         form=UserRegisterForm()
         return render(request,'EstenopoApp/registro.html',{'form':form})
+    
+    
+class ModaList(ListView):
+    model=Moda
+    template_name="EstenopoApp/moda_list.html"
+
+class ModaDetalle(DetailView):
+    model=Moda
+    template_name="EstenopoApp/moda_detalle.html"
+    
+class ModaCreacion(CreateView):
+    model=Moda
+    success_url="/EstenopoApp/moda"
+    fields=['nombre_moda', 'precio_moda'] 
+    
+class ModaUpdate(UpdateView):
+    model=Moda
+    success_url=reverse_lazy('MList')
+    fields=['nombre_moda', 'precio_moda'] 
+    
+class ModaDelete(DeleteView):
+    model=Moda
+    success_url=reverse_lazy('MList')
+    
+    
+def about(request):
+    return render(request,'EstenopoApp/about.html')

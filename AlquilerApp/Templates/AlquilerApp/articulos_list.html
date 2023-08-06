@@ -12,10 +12,10 @@
             <li>
                 <p> NOMBRE: {{alquiler.item}}</p>
                 <p>
-                    <a href="{% url 'Art_Detail' alquiler.id %}"> Ver </a>
+                    <a href="{% url 'Art_Detail' alquiler.id %}" class="btn btn-success"> Ver </a>
                     {% if request.user.is_staff %}
-                        <a href="{% url 'Art_Edit' alquiler.id %}"> Editar </a>
-                        <a href="{% url 'Art_Delete' alquiler.id %}"> Borrar </a>
+                        <a href="{% url 'Art_Edit' alquiler.id %}" class="btn btn-primary"> Editar </a>
+                        <a href="{% url 'Art_Delete' alquiler.id %}" class="btn btn-danger"> Borrar </a>
                     {% endif %}
                 </p>
             </li> 

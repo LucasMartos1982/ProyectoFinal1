@@ -6,7 +6,13 @@
 
     <p> Articulo: <i> {{ alquiler.item }} </i></p>
     <p> Codigo:<i> {{ alquiler.cod }} </i></p>
+    <p> Descripcion:<i>{{ alquiler.Descripcion }}</i></p>
+    <p> Autor:<i>{{ alquiler.Autor }}</i></p>
+    <p> Fecha:<i>{{ alquiler.fecha }}</i></p>
     <p> Precio:<i> {{ alquiler.precio }} </i></p>
+    <!-- <p> Imagen:<i>{{ alquiler.imagen }}</i></p> -->
+    
+    <img src="../../{{alquiler.imagen}}" alt="{{ alquiler.Descripcion }}" class="img-fluid">
     <p>
         <a href="{% url 'Art_List' %}"> Volver </a>
     </p>

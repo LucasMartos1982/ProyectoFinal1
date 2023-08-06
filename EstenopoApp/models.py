@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Producto(models.Model):
@@ -28,3 +29,12 @@ class Aerea(models.Model):
     
     def __str__(self):
         return f'Fotografia Aerea: {self.nombre_aerea} - Precio: {self.precio_aerea}'
+    
+class Avatar(models.Model):
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+    imagen = models.ImageField(upload_to='media/avatares', null=True, blank = True)
+ 
+    def __str__(self):
+        return f"{self.user} - {self.imagen}"

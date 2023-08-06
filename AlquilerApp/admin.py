@@ -4,4 +4,3 @@ from .models import *
 
 admin.site.register(Alquiler)
 admin.site.register(Cliente)
-admin.site.register(Avatar)

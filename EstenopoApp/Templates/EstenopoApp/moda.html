@@ -5,5 +5,18 @@
 {% block ContenidoQueCambia %}
 
     <p> En esta seccion puedes conocer nuestros trabajos en Moda</p>
-    <img src='EstenopoApp\static\assets\img\bg-masthead.jpg'>
+    <a class="btn btn-primary" href="{% url 'MList' %}">Ver Productos</a>
+    {% if request.user.is_staff %}
+        <a class="btn btn-primary" href="{% url 'MNew' %}">Alta de Producto</a>    
+    {% endif %}
+    
+
+    <!-- <img src="Proyectofinal\ProyFinal\media\Martu.jpeg" alt="Descripción de la imagen" class="img-fluid"> -->
+
+    
+
+     
+
+
+
 {% endblock %}

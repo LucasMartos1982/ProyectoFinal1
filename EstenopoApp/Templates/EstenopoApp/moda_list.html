@@ -1,0 +1,27 @@
+{% extends "EstenopoApp/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+    <p> Nuestras tarifas </p>
+
+    <ul>
+        {% for moda in object_list %}
+
+            <li>
+                <p> NOMBRE: {{moda.nombre_moda}}</p>
+                <p>
+                    <a href="{% url 'MDetail' moda.id %}" class="btn btn-success">Ver</a>
+                    {% if request.user.is_staff %}
+                        <a href="{% url 'MEdit' moda.id %}" class="btn btn-primary" > Editar </a>
+                        <a href="{% url 'MDelete' moda.id %}" class="btn btn-danger" > Borrar </a>        
+                    {% endif %}
+                </p>
+            </li> 
+        {% endfor %}    
+
+    </ul>
+
+    
+{% endblock %}

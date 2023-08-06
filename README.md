@@ -14,7 +14,7 @@ Para prueba los usuarios son:
 
 Como Administrador:
                     Usuario: lucas
-                    Contraeena: holamundo
+                    Contrasena: holamundo
 
 Como usuario comun:
                     Usuario: Martina

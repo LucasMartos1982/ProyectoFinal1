@@ -20,6 +20,7 @@ Como usuario comun:
                     Usuario: Martina
                     Contraeena: Martu2023
 
-Se adjunta video donde se muestra el funcionamiento.
+A continuacion el link del video donde se muestra el funcionamiento.
+https://www.youtube.com/watch?v=oN_seXhLs-U
       
           
